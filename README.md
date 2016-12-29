@@ -6,6 +6,8 @@ Installation
 ------------
 
 ```
-
+mkdir -p Customizing/global/plugins/Services/Cron/CronHook
+cd Customizing/global/plugins/Services/Cron/CronHook
+git clone https://github.com/studer-raimann/MPCUserSynchronization.git
 
 ```
