@@ -4,10 +4,11 @@ There needs to be a user defined field with the string "Supervisor" in it. If gi
 
 Installation
 ------------
-
 ```
 mkdir -p Customizing/global/plugins/Services/Cron/CronHook
 cd Customizing/global/plugins/Services/Cron/CronHook
 git clone https://github.com/studer-raimann/MPCUserSynchronization.git
 
 ```
+
+
