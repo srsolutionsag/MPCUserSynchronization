@@ -8,7 +8,11 @@ Installation
 mkdir -p Customizing/global/plugins/Services/Cron/CronHook
 cd Customizing/global/plugins/Services/Cron/CronHook
 git clone https://github.com/studer-raimann/MPCUserSynchronization.git
-
 ```
+Make sure you have your ILIAS cronjob activated. $cronUser is a ILIAS user E.g.:
+```
+*/5 * * * * php /var/www/ilias_44/cron/cron.php $cronUser $cronUserPassword $iliasClient
+``` 
+You can activate the plugin in the Administration.
 
-
+If you want to run the Job manually goto: Administration -> General Settings -> Cron Jobs -> Click on "Execute" at pl__MPCUserSynchronization__mpcSup
