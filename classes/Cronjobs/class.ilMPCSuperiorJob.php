@@ -102,7 +102,7 @@ class ilMPCSuperiorJob extends ilCronJob {
 	protected function getUserIdsByLastName($last_name) {
 		global $ilDB, $ilLog;
 
-		$query = "SELECT usr_id FROM usr_data WHERE lastname LIKE '$last_name'";
+		$query = "SELECT usr_id FROM usr_data WHERE lastname LIKE '".$ilDB->quote($last_name, 'text')."'";
 		$res = $ilDB->query($query);
 		$userIds = array();
 
@@ -158,7 +158,7 @@ class ilMPCSuperiorJob extends ilCronJob {
 	protected function getFieldIdWhereNameLike($name) {
 		global $ilDB;
 
-		$query = "SELECT field_id FROM udf_definition WHERE field_name LIKE '%$name%'";
+		$query = "SELECT field_id FROM udf_definition WHERE field_name LIKE '%".$ilDB->quote($name, "text")."%'";
 		$res = $ilDB->query($query);
 		if($row = $res->fetchRow(DB_FETCHMODE_ASSOC)) {
 			return $row['field_id'];
